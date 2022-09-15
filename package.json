@@ -1,0 +1,11 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "a exercise for scss",
+  "main": "index.js",
+  "scripts": {
+   "sass": "sass --watch self/pages/_home.scss:self/css/style.css "
+  },
+  "author": "lykuan",
+  "license": "ISC"
+}
