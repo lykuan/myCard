@@ -10,11 +10,14 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url("../../images/full-moon.jpg");
+    url(../../images/full-moon.jpg);
   background-size: cover;
-  border: 1px solid transparent;
-  display: flex;
-  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
   &__text {
     &-primary {
       text-transform: uppercase;
@@ -49,25 +52,38 @@
       backface-visibility: hidden;
       border-radius: 1rem;
       position: absolute;
+      box-shadow: 0rem 0.5rem 1rem $color-primary-light;
       &-cover {
-        background-image: url(../../images/background.png);
+        background-image: url(../../images/blue-abstract.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 60% center;
+        & span{
+          display: inline-block;
+          color: $color-black;
+          font-size: 2rem;
+          text-shadow: 0 .8rem 1.5rem $color-black;
+          transform: translateY(50%);
+        } 
       }
       &-profile {
+        background-image: url(../../images/background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% center;
         transform: rotateY(180deg);
-        background-image: linear-gradient(
-          to bottom right,
-          $color-text-one,
-          $color-text-two
-        );
+
+        background-color: $color-white;
         & ul li {
           list-style: none;
           color: $color-white;
-          border-bottom: 1px solid;
           padding: 2rem 5rem;
+          letter-spacing: 0.5rem;
+          & p {
+            text-align: center;
+          }
           &:not(:last-child) {
+            border-bottom: 1px solid;
             margin-bottom: 1rem;
           }
         }
@@ -82,10 +98,14 @@
     }
   }
 }
-@media screen and (max-width: 1200px) {
-  .header {
-    width: 100vw;
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 8px;
+  }
+  .header__box {
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
 }
