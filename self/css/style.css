@@ -63,7 +63,7 @@ body {
 .header .card__slide {
   height: 40rem;
   width: 30rem;
-  transition: all 0.8s;
+  transition: all 1s;
   backface-visibility: hidden;
   border-radius: 1rem;
   position: absolute;
@@ -107,7 +107,7 @@ body {
   transform: rotateY(0);
 }
 .header .card:hover > .card__slide-cover {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 @media screen and (max-width: 1140px) {
